@@ -6,7 +6,6 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Role;
 use App\Repositories\UsersInterface;
 use App\Http\Requests\CreateUserRequest;
-use App\Http\Requests\UpdateUserRequest;
 
 class UsersController extends Controller
 {
@@ -39,7 +38,7 @@ class UsersController extends Controller
     {
         $roles = Role::pluck('display_name', 'id');
         
-        return view('users.create', compact('roles'));
+        return view('auth.register', compact('roles'));
     }
 
     /**
@@ -78,7 +77,7 @@ class UsersController extends Controller
     {
         $user = $this->users->findById($id);
 
-        $this->authorize($user);
+        //$this->authorize($user);
 
         $roles = $this->users->pluckRoles($id);
         
@@ -92,7 +91,7 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUserRequest $request, $id)
+    public function update(CreateUserRequest $request, $id)
     {
         $user = $this->users->findById($id);
 

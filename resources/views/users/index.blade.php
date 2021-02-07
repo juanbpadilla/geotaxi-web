@@ -2,9 +2,6 @@
 
 @section('contenido')
     <h1>Usuarios</h1>
-    @if (auth()->user()->hasRoles(['admin']))
-        <a class="btn btn-primary float-right" href="{{ route('register') }}">Crear nuevo usuario</a>
-    @endif
     <table class="table">
         <thead>
             <th>ID</th>
@@ -30,7 +27,7 @@
                     <td>{{ $user->present()->notes() }}</td>
                     @if (auth()->user()->hasRoles(['admin']) )
                     <td>
-                        <a class="btn btn-info btn-sm" href="{{ route('usuarios.edit', $user->id) }}">Editar</a>
+                        <a class="btn btn-primary btn-sm" href="{{ route('usuarios.edit', $user->id) }}">Asignar Roles</a>
 
                         <form style="display: inline" method="POST" action="{{ route('usuarios.destroy', $user->id) }}">
                             {!! method_field('DELETE') !!}

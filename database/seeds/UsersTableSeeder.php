@@ -18,54 +18,12 @@ class UsersTableSeeder extends Seeder
         Role::truncate();
         DB::table('role_user')->truncate();
 
-        // $role2 = Role::create([
-        //     'name' => 'cliente',
-        //     'display_name' => 'Cliente',
-        //     'description' => 'Cliente del sitio web'
-        // ]);
-        
-        // for($i=0 ; $i < 50; $i++)
-        // {
-        //     if($i % 2 ==0)
-        //     {
-        //         $user1 = User::create([
-        //             'nombre' => "nom_cliente{$i}",
-        //             'apellido' => "ap_cliente{$i}",
-        //             'sexo' => 'Hombre',
-        //             'direccion' => "direccion_cliente{$i}",
-        //             'telefono' => '777777',
-        //             'email' => "cliente{$i}@email.com",
-        //             'user_name' => "cliente{$i}",
-        //             'password' => '123123',
-        //             'created_at' => Carbon::now()->subDays(100)->addDays($i)
-        //         ]);
-
-        //         $user1->roles()->save($role2);
-        //     }
-        //     else
-        //     {
-        //         $user2 = User::create([
-        //             'nombre' => "nom_cliente{$i}",
-        //             'apellido' => "ap_cliente{$i}",
-        //             'sexo' => 'Mujer',
-        //             'direccion' => "direccion_cliente{$i}",
-        //             'telefono' => '777777',
-        //             'email' => "cliente{$i}@email.com",
-        //             'user_name' => "cliente{$i}",
-        //             'password' => '123123',
-        //             'created_at' => Carbon::now()->subDays(100)->addDays($i)
-        //         ]);
-
-        //         $user2->roles()->save($role2);
-        //     }
-        // }
-        
         $user = User::create([
             'nombre' => 'Juan',
             'apellido' => 'Padilla',
             'telefono' => '777777',
             'email' => 'juan@email.com',
-            'password' => '123123',
+            'password' => bcrypt(123123)
         ]);
 
         $role = Role::create([
@@ -75,5 +33,12 @@ class UsersTableSeeder extends Seeder
         ]);
 
         $user->roles()->save($role);
+
+        $role = Role::create([
+            'name' => 'mod',
+            'display_name' => 'Moderador',
+            'description' => 'Moderador de comentarios'
+        ]);
+
     }
 }
