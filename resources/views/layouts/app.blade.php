@@ -15,6 +15,13 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="/css/app.css">
 
+    <style>
+        .fakeimg {
+          height: 200px;
+          background: #aaa;
+        }
+    </style>
+
     {!! htmlScriptTagJsApi() !!}
 </head>
 <body>
@@ -24,7 +31,7 @@
         } ?>
         <nav class="navbar navbar-expand-sm navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ route('home') }}">
+                <a class="navbar-brand" href="{{ route('index') }}">
                     <img src="/img/logo.png" alt="" style="width:60px;height:60px;"> Geotaxi
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -90,10 +97,13 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4 container">
+        <div class="py-4 container">
             @yield('contenido')
-        </main>
+        </div>
     </div>
+
+    <footer class="jumbotron text-center" style="margin-bottom:0">
+        <p>Footer</p>
+    </footer>
 </body>
 </html>

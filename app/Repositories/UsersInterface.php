@@ -6,7 +6,7 @@ interface UsersInterface
 {
     public function getPaginated();
 
-    public function store($request);
+    public function store($data);
     
     public function findById($id);
 

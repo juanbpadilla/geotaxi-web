@@ -4,6 +4,7 @@ namespace App;
 
 use App\Presenters\UserPresenter;
 use App\Notifications\ResetPasswordNotification;
+use App\Notifications\VerifyEmail;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -44,11 +45,6 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
-    // public function setPasswordAttribute($password)
-    // {
-    //     $this->attributes['password'] = bcrypt($password);
-    // }
-
     public function roles()
     {
         return $this->belongsToMany(Role::class);
@@ -88,5 +84,15 @@ class User extends Authenticatable implements MustVerifyEmail
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new ResetPasswordNotification($token));
+    }
+
+    /**
+     * Send the email verification notification.
+     *
+     * @return void
+     */
+    public function sendEmailVerificationNotification()
+    {
+        $this->notify(new VerifyEmail);
     }
 }

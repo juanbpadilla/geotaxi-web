@@ -23,9 +23,9 @@ class CacheUsers implements UsersInterface
         });
     }
 
-    public function store($request)
+    public function store($data)
     {
-        $users = $this->users->store($request);
+        $users = $this->users->store($data);
 
         Cache::tags('users')->flush();
 

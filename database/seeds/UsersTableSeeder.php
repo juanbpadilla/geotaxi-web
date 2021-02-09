@@ -39,6 +39,11 @@ class UsersTableSeeder extends Seeder
             'display_name' => 'Moderador',
             'description' => 'Moderador de comentarios'
         ]);
-
+        
+        $role = Role::create([
+            'name' => 'client',
+            'display_name' => 'Cliente',
+            'description' => 'Cliente'
+        ]);
     }
 }

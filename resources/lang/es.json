@@ -1,0 +1,24 @@
+
+{
+    "Register": "Registrar",
+    "Name": "Nombre",
+    "Last name": "Apellido",
+    "Phone": "Teléfono",
+    "E-Mail Address": "Correo electrónico",
+    "Password": "Contraseña",
+    "Confirm Password": "Confirmar contraseña",
+    
+    
+    "Verify Your Email Address": "Verifica tu email",
+    "A fresh verification link has been sent to your email address.": "Se ha enviado un nuevo enlace de verificación a su dirección de correo electrónico.",
+    "Before proceeding, please check your email for a verification link.": "Antes de continuar, revise su correo electrónico para ver el enlace de verificación.",
+    "If you did not receive the email": "Si no recibió el correo electrónico",
+    "click here to request another": "haga clic aquí para solicitar otro",
+
+
+    "Hello ": "Hola ",
+    "Verify Email Address": "Verifica tu email",
+    "Please click the button below to verify your email address.": "Haz clic en el botón de abajo para verificar tu dirección de correo electrónico.",
+    "If you did not create an account, no further action is required.": "Si no creaste una cuenta, puedes ignorar este mensaje y nada habrá cambiado.",
+    "Regards!": "¡Saludos!"
+}

@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\User;
 use App\Role;
+use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Auth\RegisterController;
 
 Class Users implements UsersInterface
@@ -15,12 +16,19 @@ Class Users implements UsersInterface
             ->paginate(10);
     }
 
-    public function store($request)
+    public function store($data)
     {
         
-        $user = User::create( $request->all());
+        // $user = User::create( $data->all());
+        $user = User::create([
+            'nombre' => $data['nombre'],
+            'apellido' => $data['apellido'],
+            'telefono' => $data['telefono'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
 
-        $user->roles()->attach($request->roles);
+        $user->roles()->attach(3);
 
         return $user;
     }
@@ -48,6 +56,6 @@ Class Users implements UsersInterface
     {
         $user->roles()->detach();
 
-        return $user->delete();                 
+        return $user->delete();            
     }
 }

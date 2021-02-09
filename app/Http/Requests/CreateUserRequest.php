@@ -24,7 +24,7 @@ class CreateUserRequest extends FormRequest
     public function rules()
     {
         return [
-            'roles' => 'required',
+            // 'roles' => 'required',
             // 'g-recaptcha-response' => 'recaptcha',
         ];
     }
