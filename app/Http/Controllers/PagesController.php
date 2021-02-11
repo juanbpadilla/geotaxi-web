@@ -8,7 +8,7 @@ class PagesController extends Controller
 {
     public function home()
     {
-        return route('home');
+        return redirect()->route('home');
     }
     
     public function atras()
