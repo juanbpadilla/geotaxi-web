@@ -64,7 +64,7 @@
           });
           infoWindow = new google.maps.InfoWindow();
           const locationButton = document.createElement("button");
-          locationButton.textContent = "Pan to Current Location";
+          locationButton.textContent = "Ir a mi ubicación actual";
           locationButton.classList.add("custom-map-control-button");
           map.controls[google.maps.ControlPosition.TOP_CENTER].push(
             locationButton
@@ -107,6 +107,13 @@
         }
       </script>
 
+  <style>
+    .fakeimg {
+      height: 290px;
+      background: rgb(255, 255, 255);
+    }
+  </style>
+
     {!! htmlScriptTagJsApi() !!}
 </head>
 <body>
@@ -116,7 +123,7 @@
         } ?>
         <nav class="navbar navbar-expand-sm navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ route('index') }}">
+                <a class="navbar-brand" href="{{ route('home') }}">
                     <img src="/img/logo.png" alt="" style="width:60px;height:60px;"> Geotaxi
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -184,8 +191,12 @@
         </nav>
         
     </div>
+
+    <div class="py-4 container-fluid">
+      @yield('contenido')
+    </div>
     
-    @yield('contenido')
+    
                     
     
     {{-- <footer class="jumbotron text-center" style="margin-bottom:0">

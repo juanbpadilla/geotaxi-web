@@ -1,0 +1,42 @@
+[33mcommit ac9954c68c13d416068338ccf817df4872f1213a[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Merge: 8f229fc 69b4f15
+Author: Juan <juanbpadillac@gmail.com>
+Date:   Thu Feb 11 02:32:47 2021 -0400
+
+    Merge branch 'main' of github.com:juanbpadilla/geotaxi-web into main
+
+[33mcommit 69b4f153dbdee1cbfeb1cb388e4cda40241f3b62[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Dimar <cocadimar@gmail.com>
+Date:   Wed Feb 10 23:43:16 2021 -0400
+
+    MODIFICACIONES
+
+[33mcommit 8f229fcaef78cf9643fc9bb6730d314903f0f899[m[33m ([m[1;31morigin/develop[m[33m)[m
+Author: Juan <juanbpadillac@gmail.com>
+Date:   Wed Feb 10 23:09:16 2021 -0400
+
+    traduccion de mensajes de verificacion
+
+[33mcommit 3b3e5a057d231623b1681a3d5f788af68ff2825f[m
+Author: Juan <juanbpadillac@gmail.com>
+Date:   Mon Feb 8 22:44:25 2021 -0400
+
+    redirigir RegisterController a repositorio
+
+[33mcommit 7a0e0c4df25f0e6c3c46ab7a5caa8997faf1e298[m
+Author: Juan <juanbpadillac@gmail.com>
+Date:   Sun Feb 7 09:57:40 2021 -0400
+
+    change auths views, add email verification, password reset
+
+[33mcommit 88f3218e09814fb8dfc8aace8488bc4ad743a594[m
+Author: Juan <juanbpadillac@gmail.com>
+Date:   Sat Feb 6 01:20:15 2021 -0400
+
+    autenticación, vistas, CRUD de mensajes
+
+[33mcommit ba35fa56d9b7302d9740011e89789ef1354c93b5[m
+Author: Juan <juanbpadillac@gmail.com>
+Date:   Fri Feb 5 07:59:59 2021 -0400
+
+    first commit
