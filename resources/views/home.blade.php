@@ -59,7 +59,7 @@
 
                     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
                     <script
-                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz916blyImktZVrx-cvERKj4HVrIVVGlM&callback=initMap&libraries=&v=weekly"
+                        src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&libraries=&v=weekly"
                         async
                     ></script>
                   </div>
