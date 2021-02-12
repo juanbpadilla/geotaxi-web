@@ -200,9 +200,10 @@
                     
     
     <footer class="jumbotron text-center" style="margin-bottom:0">
-      <h4>Proyecto de Sitio Web</h4>  
-      <h4>Hecho para la materia de Tecnología de Programación en Red por los estudiantes:</h4>  
-      <h5>Juan Bautista Padilla Caihuara - Dimar Coca Sanku</h5>
+      <h5>Proyecto de Aplicación Web en Laravel</h5><br>  
+      <h5>Hecho para la materia de Tecnología de Programación en Red</h5>  
+      <h6>Por los estudiantes: Juan Bautista Padilla Caihuara - Dimar Coca Sanku</h6>
+      <h6>Docente: Ing. Elias Cassal Baldiviezo</h6>
       <br>
       <h6>UAJMS - FCIGCH - Ingeniería Informática Yacuiba</h6>
     </footer>
