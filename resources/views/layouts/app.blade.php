@@ -110,7 +110,7 @@
   <style>
     .fakeimg {
       height: 290px;
-      background: rgb(66, 65, 65);
+      /* background: rgb(66, 65, 65); */
     }
   </style>
 

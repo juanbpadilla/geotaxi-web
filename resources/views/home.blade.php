@@ -66,7 +66,7 @@
                   <br><br>
                   <h2>RADIO MOVIL SAN PEDRO</h2>
                   <h5>Un amigo a tu servicio</h5>
-                  <div class="fakeimg"><img src="/img/img1.jpg" class="rounded mx-auto d-block" height="290px" alt=""></div>
+                  <div class="fakeimg"><img src="/img/img1.jpg" class="mx-auto d-block" style="width:100%" alt=""></div>
                   
                 </div>
               </div>
