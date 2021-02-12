@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/googlemap.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="/css/app.css">
@@ -50,67 +51,65 @@
         }
     </style>
 
-    <script>
-        // Note: This example requires that you consent to location sharing when
-        // prompted by your browser. If you see the error "The Geolocation service
-        // failed.", it means you probably did not give permission for the browser to
-        // locate you.
-        let map, infoWindow;
-  
-        function initMap() {
-          map = new google.maps.Map(document.getElementById("map"), {
-            center: { lat: -34.397, lng: 150.644 },
-            zoom: 6,
-          });
-          infoWindow = new google.maps.InfoWindow();
-          const locationButton = document.createElement("button");
-          locationButton.textContent = "Ir a mi ubicación actual";
-          locationButton.classList.add("custom-map-control-button");
-          map.controls[google.maps.ControlPosition.TOP_CENTER].push(
-            locationButton
-          );
+<script>
+  // Note: This example requires that you consent to location sharing when
+  // prompted by your browser. If you see the error "The Geolocation service
+  // failed.", it means you probably did not give permission for the browser to
+  // locate you.
+  let map, infoWindow;
 
-          locationButton.addEventListener("click", () => {
-            // Try HTML5 geolocation.
-            if (navigator.geolocation) {
-              navigator.geolocation.getCurrentPosition(
-                (position) => {
-                  const pos = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude,
-                  };
+  function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: -34.397, lng: 150.644 },
+      zoom: 6,
+    });
+    infoWindow = new google.maps.InfoWindow();
+    const locationButton = document.createElement("button");
+    locationButton.textContent = "Pan to Current Location";
+    locationButton.classList.add("custom-map-control-button");
+    map.controls[google.maps.ControlPosition.TOP_CENTER].push(
+      locationButton
+    );
+    locationButton.addEventListener("click", () => {
+      // Try HTML5 geolocation.
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+            infoWindow.setPosition(pos);
+            infoWindow.setContent("Location found.");
+            infoWindow.open(map);
+            map.setCenter(pos);
+          },
+          () => {
+            handleLocationError(true, infoWindow, map.getCenter());
+          }
+        );
+      } else {
+        // Browser doesn't support Geolocation
+        handleLocationError(false, infoWindow, map.getCenter());
+      }
+    });
+  }
 
-                  infoWindow.setPosition(pos);
-                  infoWindow.setContent("Location found.");
-                  infoWindow.open(map);
-                  map.setCenter(pos);
-                },
-                () => {
-                  handleLocationError(true, infoWindow, map.getCenter());
-                }
-              );
-            } else {
-              // Browser doesn't support Geolocation
-              handleLocationError(false, infoWindow, map.getCenter());
-            }
-          });
-        }
-  
-        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-          infoWindow.setPosition(pos);
-          infoWindow.setContent(
-            browserHasGeolocation
-              ? "Error: The Geolocation service failed."
-              : "Error: Your browser doesn't support geolocation."
-          );
-          infoWindow.open(map);
-        }
-      </script>
+  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(
+      browserHasGeolocation
+        ? "Error: The Geolocation service failed."
+        : "Error: Your browser doesn't support geolocation."
+    );
+    infoWindow.open(map);
+  }
+</script>
 
   <style>
     .fakeimg {
       height: 290px;
-      background: rgb(255, 255, 255);
+      background: rgb(66, 65, 65);
     }
   </style>
 
@@ -123,7 +122,7 @@
         } ?>
         <nav class="navbar navbar-expand-sm navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ route('home') }}">
+                <a class="navbar-brand" href="{{ route('index') }}">
                     <img src="/img/logo.png" alt="" style="width:60px;height:60px;"> Geotaxi
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -193,10 +192,10 @@
     </div>
 
     <div class="py-4 container-fluid">
-      @yield('contenido')
+      
     </div>
     
-    
+    @yield('contenido')
                     
     
     {{-- <footer class="jumbotron text-center" style="margin-bottom:0">
