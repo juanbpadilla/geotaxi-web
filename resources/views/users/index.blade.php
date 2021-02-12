@@ -27,7 +27,7 @@
                     <td>{{ $user->present()->notes() }}</td>
                     @if (auth()->user()->hasRoles(['admin']) )
                     <td>
-                        <a class="btn btn-primary btn-sm" href="{{ route('usuarios.edit', $user->id) }}">Asignar Roles</a>
+                        <a class="btn btn-primary btn-sm" href="{{ route('pasajeros.edit', $user->id) }}">Asignar Roles</a>
 
                         <form style="display: inline" method="POST" action="{{ route('usuarios.destroy', $user->id) }}">
                             {!! method_field('DELETE') !!}

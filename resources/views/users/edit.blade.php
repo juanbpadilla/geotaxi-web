@@ -19,38 +19,8 @@
                         {!! method_field('PUT') !!}
                         @csrf
                         
-                        <table class="table">
-                            <tr>
-                                <th>Nombre:</th>
-                                <td>{{ $user->nombre }} {{ $user->apellido }}</td>
-                            </tr>
-                            <tr>
-                                <th>Email:</th>
-                                <td>{{ $user->email }}</td>
-                            </tr>
-                            <tr>
-                                <th colspan="2">
-                                    @if(auth()->check())
-                                        @if (auth()->user()->hasRoles(['admin']))
-                                        <div class="col-md-8">
-                                            @foreach($roles as $id => $name)
-                                                <div class="form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <input 
-                                                            type="checkbox" class="form-check-input" 
-                                                            value="{{ $id }}" {{ $user->present()->check($id) }}
-                                                            name="roles[]">
-                                                        {{ $name }}
-                                                    </label>
-                                                </div>
-                                            @endforeach
-                                        </div>
-                                        @endif
-                                    @endif
-                                    {!! $errors->first('roles', '<span class=error>:message</span>') !!}
-                                </th>
-                            </tr>
-                        </table>
+                        @include('users.form')
+                                
 
                         <div class="form-group row mb-0">
                             <a class="nav-link" href="{{ url()->previous() }}">◄ Volver</a>

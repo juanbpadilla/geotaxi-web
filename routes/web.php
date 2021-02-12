@@ -28,6 +28,8 @@ Route::resource('mensajes', 'MessagesController');
 
 Route::resource('usuarios', 'UsersController');
 
+Route::resource('pasajeros', 'PassangerController');
+
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
