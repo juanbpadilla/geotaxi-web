@@ -37,10 +37,10 @@
                   <p>A traves de nuestras redes sociales.</p>
                   <ul class="nav nav-pills text-center small">
                     <li class="nav-item">
-                      <a class="nav-link text-secondary" href="https://wa.me/59173368506"><img src="/img/WhatsApp-Free-PNG-Image.png" class="icon-" height="30px"><br>WhatsApp</a>
+                      <a class="nav-link text-secondary" href="https://wa.me/59174546699"><img src="/img/WhatsApp-Free-PNG-Image.png" class="icon-" height="30px"><br>WhatsApp</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link text-secondary" href="https://www.facebook.com/jbpadillac/"><img src="/img/facebook-png-redes-sociales-11.png" class="icon-" height="30px"><br>Facebook</a>
+                      <a class="nav-link text-secondary" href="https://www.facebook.com/RadioMovilSanPedro"><img src="/img/facebook-png-redes-sociales-11.png" class="icon-" height="30px"><br>Facebook</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link text-secondary" href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fpadilla1248%3Ffbclid%3DIwAR3hogWiN4kgNY0B9MQEw6Cb6x1DVBzokBx22E4eTp-vQWfipuIHd8yqHkU&h=AT1UKSmQKuGzM9qG9iw8myMXqAK6ePzOyrhi5gU_sgFQ19eS5eenYnD_4VXfM3yFZQrD7c-8dUR3Q-RD8OP9rehgaXU_5wMqzsFp1_acKM3iLcOUrGHBtM5771SOyI2LGKk"><img src="/img/instagram-icon.png" class="icon-" height="30px"><br>Instagram</a>
