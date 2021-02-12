@@ -194,14 +194,18 @@
     </div>
 
     <div class="py-4 container-fluid">
+      @yield('contenido')
       
     </div>
     
-    @yield('contenido')
                     
     
-    {{-- <footer class="jumbotron text-center" style="margin-bottom:0">
-        <p>Footer</p>
-    </footer> --}}
+    <footer class="jumbotron text-center" style="margin-bottom:0">
+      <h4>Proyecto de Sitio Web</h4>  
+      <h4>Hecho para la materia de Tecnología de Programación en Red por los estudiantes:</h4>  
+      <h5>Juan Bautista Padilla Caihuara - Dimar Coca Sanku</h5>
+      <br>
+      <h6>UAJMS - FCIGCH - Ingeniería Informática Yacuiba</h6>
+    </footer>
 </body>
 </html>
