@@ -13,11 +13,10 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/googlemap.js') }}" defer></script>
+    {{-- <script src="{{ asset('js/googlemap.js') }}" defer></script> --}}
 
     <!-- Fonts -->
     <link rel="stylesheet" href="/css/app.css">
-    
     
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <style type="text/css">
@@ -62,7 +61,7 @@
 
   function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: -34.397, lng: 150.644 },
+      center: { lat: -22.01643, lng: -63.67753 },
       zoom: 6,
     });
     infoWindow = new google.maps.InfoWindow();
