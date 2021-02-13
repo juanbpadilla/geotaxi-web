@@ -22,6 +22,9 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\SendAutoresponder',
             'App\Listeners\SendNotificationToTheOwner',
         ],
+        'App\Events\MessageWasResponder' => [
+            'App\Listeners\SendResponderMessage',
+        ],
         
     ];
 

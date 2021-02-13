@@ -24,6 +24,8 @@
                     @if (auth()->user()->hasRoles(['admin', 'mod']) )
                         <td>
                             <a class="btn btn-info btn-sm" href="{{ route('mensajes.edit', $message->id) }}">Editar</a>
+                            
+                            <a class="btn btn-info btn-sm" href="{{ route('repuesta.create', $message->id) }}">Responder</a>
 
                             <form style="display: inline" method="POST" action="{{ route('mensajes.destroy', $message->id) }}">
                                 {!! method_field('DELETE') !!}

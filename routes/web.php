@@ -26,6 +26,8 @@ Route::get('volver', function(){
 
 Route::resource('mensajes', 'MessagesController');
 
+Route::resource('repuesta', 'MessageResponderController');
+
 Route::resource('usuarios', 'UsersController');
 
 Route::resource('pasajeros', 'PassangerController');
