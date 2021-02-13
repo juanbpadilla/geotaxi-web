@@ -2,6 +2,9 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
+
+    <link rel="icon" type="image/png" href="/img/logo-icon.png" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="google-site-verification" content="Nx3PepaEAk87yh0RnIQ5mMUO6JiINIZ3p48bhOtiaAU" />
