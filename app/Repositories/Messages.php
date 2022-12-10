@@ -43,3 +43,5 @@ Class Messages implements MessagesInterface
         return Message::findOrFail($id)->delete();
     }
 }
+
+// EloquentMessages

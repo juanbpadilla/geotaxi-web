@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
 use App\Repositories\MessagesInterface;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateMessageRequest;
 use App\Events\MessageWasRecived;
+use Illuminate\Mail\Mailer;
+use Illuminate\Support\Facades\Mail as FacadesMail;
 
 class MessagesController extends Controller
 {
@@ -49,7 +52,10 @@ class MessagesController extends Controller
     public function store(Request $request)
     {
         $message = $this->messages->store($request);
-        
+
+        // Mail::send('emails.contact', ['msg' => $message],function($m) use($message){
+        //     $m->to($message->email, $message->nombre)->subject('Tu mensaje fue recibido');
+        // });
         event(new MessageWasRecived($message));
 
         return redirect()->route('mensajes.create')->with('info', 'Hemos recibido tu mensaje');

@@ -14,3 +14,5 @@ interface MessagesInterface
     
     public function destroy($id);
 }
+
+// Messages
